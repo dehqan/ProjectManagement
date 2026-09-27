@@ -1,0 +1,254 @@
+<title>کارنما</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=Reem+Kufi:wght@600&display=swap">
+<style>
+:root{
+  --ground:#EEF1F3; --surface:#FFFFFF; --sunk:#F5F7F8; --line:#DCE2E6;
+  --ink:#16232A; --ink-2:#4D5F68; --ink-3:#7F8F97;
+  --saffron:#C9790A; --saffron-soft:#FBEFD9; --saffron-ink:#8A5100;
+  --teal:#2E5D66; --teal-soft:#E1ECEE;
+  --good:#2F7D4F; --good-soft:#E3F2E8; --warn:#B25E00; --warn-soft:#FCEBD6; --crit:#B3261E; --crit-soft:#FBE3E1;
+  --glow:rgba(201,121,10,.35);
+  --radius:10px;
+  font-family:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#0F1619; --surface:#172227; --sunk:#131C20; --line:#26343A;
+    --ink:#E6EDEF; --ink-2:#A7B6BC; --ink-3:#74868D;
+    --saffron:#F0A53A; --saffron-soft:#3A2A12; --saffron-ink:#F6C57A;
+    --teal:#7FB3BC; --teal-soft:#1D3238;
+    --good:#6FC48F; --good-soft:#15301F; --warn:#F0A04B; --warn-soft:#35240F; --crit:#F08A83; --crit-soft:#3A1A18;
+    --glow:rgba(240,165,58,.35);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#0F1619; --surface:#172227; --sunk:#131C20; --line:#26343A;
+  --ink:#E6EDEF; --ink-2:#A7B6BC; --ink-3:#74868D;
+  --saffron:#F0A53A; --saffron-soft:#3A2A12; --saffron-ink:#F6C57A;
+  --teal:#7FB3BC; --teal-soft:#1D3238;
+  --good:#6FC48F; --good-soft:#15301F; --warn:#F0A04B; --warn-soft:#35240F; --crit:#F08A83; --crit-soft:#3A1A18;
+  --glow:rgba(240,165,58,.35);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif;font-size:14px;line-height:1.7;padding-inline:16px;padding-block:16px}
+.app{direction:rtl;max-width:1320px;margin-inline:auto;display:grid;gap:14px}
+.top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-family:"Reem Kufi","Vazirmatn",sans-serif;font-size:22px;color:var(--teal);letter-spacing:.5px}
+.brand b{color:var(--saffron)}
+.cmd{flex:1 1 320px;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px;color:var(--ink-3)}
+.cmd kbd{font-family:inherit;font-size:12px;background:var(--sunk);border:1px solid var(--line);border-radius:6px;padding:0 6px;color:var(--ink-2);direction:ltr}
+.crumbs{color:var(--ink-2);font-size:13px}
+.crumbs strong{color:var(--ink)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:14px;align-items:start}
+@media (max-width:960px){.layout{grid-template-columns:1fr}}
+/* board */
+.board-wrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px;display:grid;gap:12px}
+.board-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.board-head h1{font-size:18px;margin:0;text-wrap:balance}
+.views{display:flex;gap:4px;background:var(--sunk);border-radius:8px;padding:3px}
+.views span{padding:2px 10px;border-radius:6px;font-size:12.5px;color:var(--ink-2)}
+.views .on{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.board{grid-template-columns:1fr}}
+.col{background:var(--sunk);border-radius:8px;padding:10px;display:grid;gap:8px;align-content:start}
+.col h2{font-size:13px;margin:0;color:var(--ink-2);font-weight:600;display:flex;justify-content:space-between;letter-spacing:.2px}
+.col h2 small{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 10px;display:grid;gap:6px;transition:box-shadow .5s,border-color .5s}
+.card .t{font-weight:500;line-height:1.55}
+.meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12px;color:var(--ink-3)}
+.av{inline-size:22px;block-size:22px;border-radius:50%;display:inline-grid;place-items:center;font-size:11px;font-weight:600;color:#fff;background:var(--teal)}
+.av.s{background:#7A5AA6}.av.r{background:#2F7D4F}.av.a{background:#A2512B}.av.o{background:#3C6FA8}
+.chip{border-radius:999px;padding:0 8px;font-size:11.5px;font-weight:500}
+.p-hi{background:var(--crit-soft);color:var(--crit)}
+.p-md{background:var(--warn-soft);color:var(--warn)}
+.p-lo{background:var(--teal-soft);color:var(--teal)}
+.late{color:var(--crit);font-weight:500}
+.card.fresh{border-color:var(--saffron);box-shadow:0 0 0 3px var(--glow)}
+.card.moved{border-color:var(--saffron);box-shadow:0 0 0 3px var(--glow)}
+.note{font-size:12px;color:var(--ink-3)}
+/* companion */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);display:grid;grid-template-rows:auto 1fr auto;min-height:620px}
+.panel-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.panel-head .dot{inline-size:9px;block-size:9px;border-radius:50%;background:var(--good)}
+.panel-head strong{font-size:14px}
+.panel-head span{font-size:12px;color:var(--ink-3);margin-inline-start:auto}
+.thread{padding:14px;display:grid;gap:12px;align-content:start}
+.msg-u{justify-self:start;background:var(--teal);color:#fff;border-radius:12px 12px 12px 4px;padding:7px 12px;max-width:88%}
+:root[data-theme="dark"] .msg-u{color:#0F1619}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .msg-u{color:#0F1619}}
+.msg-a{display:grid;gap:8px}
+.msg-a p{margin:0;color:var(--ink)}
+.comp{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.comp-h{background:var(--sunk);font-size:12px;color:var(--ink-2);padding:5px 10px;display:flex;justify-content:space-between;letter-spacing:.2px}
+.row{display:flex;align-items:center;gap:8px;padding:7px 10px;border-top:1px solid var(--line);font-size:13px}
+.row:first-of-type{border-top:0}
+.row .grow{flex:1;min-width:0}
+.row input{accent-color:var(--saffron);inline-size:15px;block-size:15px}
+.arrow{color:var(--ink-3);font-size:12px}
+.actions{display:flex;gap:8px;padding:8px 10px;border-top:1px solid var(--line);background:var(--sunk)}
+button{font-family:inherit;font-size:13px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:4px 12px;cursor:pointer}
+button.primary{background:var(--saffron);border-color:var(--saffron);color:#1B1203;font-weight:600}
+button:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+.receipt{display:flex;align-items:center;gap:8px;background:var(--good-soft);color:var(--good);border-radius:8px;padding:7px 10px;font-size:13px}
+.receipt button{margin-inline-start:auto;background:transparent;border-color:currentColor;color:inherit;padding:1px 10px}
+.composer{border-top:1px solid var(--line);padding:10px 12px;display:grid;gap:8px}
+.sugg{display:flex;gap:6px;flex-wrap:wrap}
+.sugg span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 10px;color:var(--ink-2);background:var(--sunk)}
+.input{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:6px 8px 6px 10px;background:var(--sunk)}
+.input input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:13px;color:var(--ink);direction:rtl}
+.input input::placeholder{color:var(--ink-3)}
+.input input:focus{outline:none}
+.input:focus-within{border-color:var(--saffron)}
+.mic{inline-size:32px;block-size:32px;border-radius:50%;background:var(--saffron);display:grid;place-items:center;border:0;padding:0}
+.mic svg{inline-size:16px;block-size:16px;fill:#1B1203}
+.caption{max-width:1320px;margin-inline:auto;direction:rtl;color:var(--ink-3);font-size:12px;text-align:start}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="brand">کار<b>نما</b></div>
+    <div class="cmd" role="search">
+      <span>بگو چی می‌خوای یا جست‌وجو کن…</span>
+      <span style="margin-inline-start:auto"><kbd>Ctrl K</kbd></span>
+    </div>
+    <div class="crumbs">تیم محصول · <strong>اپ موبایل</strong> · اسپرینت ۱۴</div>
+  </header>
+
+  <div class="layout">
+    <section class="board-wrap" aria-label="برد اسپرینت">
+      <div class="board-head">
+        <h1>اسپرینت ۱۴ · ۲۶ مهر تا ۹ آبان ۱۴۰۵</h1>
+        <div class="views" aria-label="نما"><span>فهرست</span><span class="on">برد</span><span>جدول</span><span>تقویم</span><span>خط زمان</span></div>
+      </div>
+      <div class="board">
+        <div class="col">
+          <h2>پیش‌رو <small id="c-todo">۴</small></h2>
+          <article class="card fresh">
+            <div class="t">تست API پرداخت اقساطی</div>
+            <div class="meta"><span class="av r">ر</span><span class="chip p-hi">بالا</span><span>۲۹ مهر</span></div>
+            <div class="note">تازه، ساخته‌شده با هوش مصنوعی</div>
+          </article>
+          <article class="card" id="t1">
+            <div class="t">طراحی صفحهٔ خلاصهٔ اقساط</div>
+            <div class="meta"><span class="av a" data-who="a">ع</span><span class="chip p-md">متوسط</span><span class="late">۲۵ مهر · عقب</span></div>
+          </article>
+          <article class="card" id="t2">
+            <div class="t">متن اعلان یادآوری قسط</div>
+            <div class="meta"><span class="av a" data-who="a">ع</span><span class="chip p-lo">کم</span><span class="late">۲۴ مهر · عقب</span></div>
+          </article>
+          <article class="card">
+            <div class="t">به‌روزرسانی کتابخانهٔ نمودار</div>
+            <div class="meta"><span class="av o">ا</span><span class="chip p-lo">کم</span><span>۵ آبان</span></div>
+          </article>
+        </div>
+        <div class="col">
+          <h2>در جریان <small>۳</small></h2>
+          <article class="card" id="t3">
+            <div class="t">رفع باگ منوی کشویی در اندروید</div>
+            <div class="meta"><span class="av a" data-who="a">ع</span><span class="chip p-hi">بالا</span><span class="late">۲۳ مهر · عقب</span></div>
+          </article>
+          <article class="card">
+            <div class="t">صفحهٔ ورود با کد یکبارمصرف</div>
+            <div class="meta"><span class="av s">س</span><span class="chip p-md">متوسط</span><span>امروز</span></div>
+          </article>
+          <article class="card">
+            <div class="t">بازبینی کد ماژول سبد خرید</div>
+            <div class="meta"><span class="av r">ر</span><span class="chip p-md">متوسط</span><span>۲۸ مهر</span></div>
+          </article>
+        </div>
+        <div class="col">
+          <h2>انجام‌شده <small>۵</small></h2>
+          <article class="card"><div class="t">اتصال درگاه پرداخت</div><div class="meta"><span class="av r">ر</span><span>۲۰ مهر</span></div></article>
+          <article class="card"><div class="t">طراحی آیکون‌های جدید</div><div class="meta"><span class="av a">ع</span><span>۱۹ مهر</span></div></article>
+          <article class="card"><div class="t">مستند API اقساط</div><div class="meta"><span class="av o">ا</span><span>۱۸ مهر</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel" aria-label="همکار هوشمند">
+      <div class="panel-head"><span class="dot" aria-hidden="true"></span><strong>همکار</strong><span>می‌بیند: برد اسپرینت ۱۴</span></div>
+
+      <div class="thread">
+        <div class="msg-u">امروز تیم چی تحویل می‌ده؟</div>
+        <div class="msg-a">
+          <p>دو کار امروز موعد دارن و سه کار عقب افتادن، هر سه مال علی:</p>
+          <div class="comp">
+            <div class="comp-h"><span>فهرست تسک</span><span>۵ مورد</span></div>
+            <div class="row"><span class="av s">س</span><span class="grow">صفحهٔ ورود با کد یکبارمصرف</span><span class="chip p-md">امروز</span></div>
+            <div class="row"><span class="av r">ر</span><span class="grow">تست API پرداخت اقساطی</span><span class="chip p-hi">۲۹ مهر</span></div>
+            <div class="row"><span class="av a">ع</span><span class="grow">رفع باگ منوی کشویی</span><span class="late">۴ روز عقب</span></div>
+            <div class="row"><span class="av a">ع</span><span class="grow">طراحی صفحهٔ خلاصهٔ اقساط</span><span class="late">۲ روز عقب</span></div>
+            <div class="row"><span class="av a">ع</span><span class="grow">متن اعلان یادآوری قسط</span><span class="late">۳ روز عقب</span></div>
+          </div>
+        </div>
+
+        <div class="msg-u">علی تا آخر هفته مرخصیه. کارهای عقب‌افتاده‌ش رو بده به سارا و موعدشون رو بذار پس‌فردا</div>
+
+        <div class="msg-a" id="plan">
+          <p>این سه تغییر رو پیشنهاد می‌کنم. تیک هر کدوم رو که نمی‌خوای بردار:</p>
+          <div class="comp">
+            <div class="comp-h"><span>پیش‌نمایش تغییر</span><span>سارا خبردار می‌شود</span></div>
+            <label class="row" for="c1"><input type="checkbox" id="c1" checked><span class="grow">رفع باگ منوی کشویی</span><span class="arrow">علی ← سارا · ۲۹ مهر</span></label>
+            <label class="row" for="c2"><input type="checkbox" id="c2" checked><span class="grow">طراحی صفحهٔ خلاصهٔ اقساط</span><span class="arrow">علی ← سارا · ۲۹ مهر</span></label>
+            <label class="row" for="c3"><input type="checkbox" id="c3" checked><span class="grow">متن اعلان یادآوری قسط</span><span class="arrow">علی ← سارا · ۲۹ مهر</span></label>
+            <div class="actions"><button class="primary" id="apply" type="button">اعمال</button><button type="button" id="cancel">لغو</button></div>
+          </div>
+        </div>
+
+        <div class="receipt" id="receipt" hidden>
+          <span id="receipt-text">۳ تسک به سارا رسید · موعد ۲۹ مهر</span>
+          <button type="button" id="undo">برگرداندن</button>
+        </div>
+      </div>
+
+      <div class="composer">
+        <div class="sugg" aria-label="پیشنهاد"><span>گزارش هفتگی رو بنویس</span><span>کی سرش شلوغه؟</span><span>اسپرینت بعد رو بچین</span></div>
+        <div class="input">
+          <input id="ask" type="text" aria-label="پیام به همکار" placeholder="بگو چی می‌خوای، یا میکروفون رو نگه دار…">
+          <button class="mic" type="button" aria-label="فرمان صوتی"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-2.08A7 7 0 0 0 19 12h-2z"/></svg></button>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <p class="caption">نمونهٔ رابط برای پروپوزال؛ داده‌ها نمونه‌اند. «کارنما» نام کاری است. روی «اعمال» و سپس «برگرداندن» بزنید تا قاعدهٔ «پیش‌نمایش، اعمال، برگرداندن» را ببینید.</p>
+</div>
+
+<script>
+(function(){
+  var fa=['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+  function faNum(n){return String(n).replace(/\d/g,function(d){return fa[d];});}
+  var ids=['t1','t2','t3'], boxes=['c1','c2','c3'];
+  var saved={};
+  var apply=document.getElementById('apply'), cancel=document.getElementById('cancel'),
+      undo=document.getElementById('undo'), receipt=document.getElementById('receipt'),
+      rtext=document.getElementById('receipt-text'), plan=document.getElementById('plan');
+  apply.addEventListener('click',function(){
+    var n=0;
+    ids.forEach(function(id,i){
+      if(!document.getElementById(boxes[i]).checked) return;
+      var card=document.getElementById(id); saved[id]=card.innerHTML; n++;
+      var av=card.querySelector('.av'); av.className='av s'; av.textContent='س';
+      var late=card.querySelector('.late'); late.className=''; late.textContent='۲۹ مهر';
+      card.classList.add('moved');
+    });
+    plan.hidden=true;
+    rtext.textContent=faNum(n)+' تسک به سارا رسید · موعد ۲۹ مهر';
+    receipt.hidden=false;
+    setTimeout(function(){ids.forEach(function(id){document.getElementById(id).classList.remove('moved');});},1800);
+  });
+  cancel.addEventListener('click',function(){plan.hidden=true;receipt.hidden=false;rtext.textContent='چیزی تغییر نکرد';undo.hidden=true;});
+  undo.addEventListener('click',function(){
+    Object.keys(saved).forEach(function(id){var c=document.getElementById(id);c.innerHTML=saved[id];c.classList.add('moved');setTimeout(function(){c.classList.remove('moved');},1200);});
+    saved={};
+    rtext.textContent='برگردانده شد';
+    undo.hidden=true;
+    setTimeout(function(){receipt.hidden=true;plan.hidden=false;undo.hidden=false;},1600);
+  });
+})();
+</script>
