@@ -337,7 +337,6 @@
 | S-FEAS-05 | Google، Gemma 4 model card (Tau2، MMMLU) — https://ai.google.dev/gemma/docs/core/model_card_4 | خوانده‌شده |
 | S-FEAS-06 | BenchLM، τ²-bench leaderboard (سپتامبر ۲۰۲۶) — https://benchlm.ai/benchmarks/tau2-bench | خلاصهٔ جست‌وجو |
 | S-FEAS-07 | GLM-4.7-Flash benchmark scores — https://benchmarklist.com/models/z-ai-glm-4.7-flash/ ؛ https://medium.com/@zh.milo/glm-4-7-flash-the-ultimate-2026-guide-to-local-ai-coding-assistant-93a43c3f8db3 | خلاصهٔ جست‌وجو |
-| S-FEAS-08 | Towards a Standard, Enterprise-Relevant Agentic AI Benchmark (Qwen3 در BFCL-v3) — https://arxiv.org/pdf/2511.08042 | خلاصهٔ جست‌وجو (در متن استفاده نشد؛ برای مرجع) |
 | S-FEAS-09 | MASSIVE-Agents: A Benchmark for Multilingual Function-Calling in 52 Languages, Findings EMNLP 2025 (جدول‌های ۵ و ۶، ردیف fa-IR) — https://aclanthology.org/2025.findings-emnlp.1099/ | خوانده‌شده |
 | S-FEAS-10 | Lost in Execution: On the Multilingual Robustness of Tool Calling in LLMs — https://arxiv.org/html/2601.05366v1 | خوانده‌شده |
 | S-FEAS-11 | Arabic Prompts with English Tools: A Benchmark — https://arxiv.org/html/2601.05101 | خوانده‌شده |
