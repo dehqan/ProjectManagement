@@ -20,6 +20,6 @@
 | `work-management.md` | مدیریت کار عمومی: تسکولو، میزیتو، همتیک، بهتایم، تیم‌یار، پی‌گیر، بالونت | خالی |
 | `bpm-office-automation.md` | اتوماسیون اداری و BPMS: دیدگاه چارگون، راهکاران، فرزین، فراگستر، پیوست | خالی |
 | `crm-helpdesk.md` | CRM و تیکت: دیدار، پیام‌گستر، دانا، هلپیکال، میزخدمت | خالی |
-| `domain-specialized.md` | CMMS و DCC: PMworks، راهکاران نت، ساینا، کهن؛ ورجاوند، آفام، داده‌تأمین، پروژان؛ نوین‌هاب | خالی |
-| `foreign-selfhosted.md` | خارجی‌های در دسترس: Jira خوداستقرار، GitLab، Mattermost، Rocket.Chat، OpenProject، Nextcloud | خالی |
+| `domain-specialized.md` | CMMS و DCC: PMworks، راهکاران نت، ساینا، کهن؛ ورجاوند، آفام، داده‌تأمین، پروژان؛ نوین‌هاب | نوشته‌شده |
+| `foreign-selfhosted.md` | خارجی‌های در دسترس: Jira خوداستقرار، GitLab، Mattermost، Rocket.Chat، OpenProject، Nextcloud | پیش‌نویس اول |
 | `synthesis.md` | جمع‌بندی برای بخش ۲: چه چیزی در بازار هست، چه چیزی نیست | خالی |
