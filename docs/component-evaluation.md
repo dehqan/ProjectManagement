@@ -16,11 +16,15 @@
 
 ## کارت‌ها
 
-| حوزه | کاندیدها | وضعیت |
-|---|---|---|
-| ویرایشگر سند Office (DMS-06) | OnlyOffice، Collabora | خالی |
-| تماس زنده (COL-11) | Jitsi، LiveKit | خالی |
-| OCR فارسی (DMS-11) | Tesseract با مدل فارسی، گزینه‌های دیگر | خالی |
-| جست‌وجو (PLT-07) | OpenSearch، Meilisearch | خالی |
-| مدل زبانی (PLT-10، PLT-14) | مدل‌های متن‌باز با پشتیبانی فارسی | خالی |
-| BI تعبیه‌شده (REP-02) | Metabase، Superset | خالی |
+کارت کامل هر حوزه در `components/` است.
+
+| حوزه | کاندیدها | پیشنهاد | نتیجه | شرط اصلی | کارت |
+|---|---|---|---|---|---|
+| ویرایشگر سند Office (DMS-06) | OnlyOffice، Collabora | **Collabora Online** | مشروط | آزمون ۴۰ تا ۶۰ فایل واقعی فارسی (جدول RTL، فونت، نیم‌فاصله) با رفت‌وبرگشت به Word/Excel. OnlyOffice رد (باگ‌های باز RTL). | `components/doc-editor.md` |
+| تماس زنده (COL-11) | Jitsi، LiveKit | **LiveKit** | مشروط | آزمون میدانی TURN/TLS روی ۴۴۳ از مرکز دادهٔ داخلی روی سه اپراتور همراه؛ رابط فارسی را خودمان می‌سازیم. Jitsi گزینهٔ دوم. | `components/meetings.md` |
+| OCR فارسی (DMS-11) | Tesseract، PaddleOCR | **Tesseract با مدل تنظیم‌شدهٔ فارسی** | مشروط | خطای نویسه حداکثر ۲٪ روی ۲۰۰ تا ۳۰۰ صفحه سند واقعی؛ مدل رسمی `fas` و PaddleOCR رد. | `components/ocr.md` |
+| جست‌وجو (PLT-07) | OpenSearch، Meilisearch، Typesense | **OpenSearch** | مشروط | فیلتر مجوز را سرویس ما در هر پرس‌وجو اعمال کند؛ آزمون نشت؛ تحلیلگر سفارشی برای نیم‌فاصله. | `components/search.md` |
+| مدل زبانی (PLT-10) | — | منتظر پژوهش | — | — | `components/llm.md` |
+| BI تعبیه‌شده (REP-02) | Metabase، Superset | منتظر پژوهش | — | — | `components/bi.md` |
+
+**الگوی مشترک:** هیچ مؤلفه‌ای «عبور» بی‌قید نگرفت؛ همه مشروط به آزمون با دادهٔ فارسی واقعی خودمان‌اند. این آزمون‌ها جزو کارهای فاز ۰ هستند.
