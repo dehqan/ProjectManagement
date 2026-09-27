@@ -24,4 +24,3 @@
 | جست‌وجو (PLT-07) | OpenSearch، Meilisearch | خالی |
 | مدل زبانی (PLT-10، PLT-14) | مدل‌های متن‌باز با پشتیبانی فارسی | خالی |
 | BI تعبیه‌شده (REP-02) | Metabase، Superset | خالی |
-| میزبانی Git (REL-02، اگر داخل شود) | GitLab، Gitea | خالی |
