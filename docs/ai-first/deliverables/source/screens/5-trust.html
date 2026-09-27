@@ -1,0 +1,49 @@
+<!doctype html><html lang="fa"><head><meta charset="utf-8"><link rel="stylesheet" href="../base.css"><link rel="stylesheet" href="../frame.css">
+<style>
+.grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;min-height:0;align-items:start}
+.col3{background:var(--ground);border-radius:16px;padding:18px;display:grid;gap:12px;align-content:start;box-shadow:0 30px 60px rgba(0,0,0,.3)}
+.col3 h3{margin:0;font-size:17px}
+.col3 .lead{margin:0;color:var(--ink-2);font-size:13px;line-height:1.8}
+.n{inline-size:28px;block-size:28px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+.hd{display:flex;align-items:center;gap:10px}
+.fail{display:flex;align-items:flex-start;gap:9px;background:var(--crit-soft);color:var(--crit);border-radius:9px;padding:8px 12px;font-size:12.5px;line-height:1.7}
+.part{display:flex;align-items:center;gap:9px;background:var(--warn-soft);color:var(--warn);border-radius:9px;padding:8px 12px;font-size:13px;font-weight:600}
+.log{display:grid;gap:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.log div{display:flex;gap:8px;align-items:center;font-size:12.5px;padding:7px 12px;border-top:1px solid var(--line)}
+.log div:first-child{border-top:0}
+.ai{font-size:10.5px;background:var(--saffron-soft);color:var(--saffron-ink);border-radius:999px;padding:0 7px;font-weight:600}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:11.5px}
+.seg span{padding:2px 9px;color:var(--ink-2);background:var(--surface)}.seg .on{background:var(--teal);color:#fff}
+.set div{display:flex;justify-content:space-between;align-items:center;padding:7px 12px;border-top:1px solid var(--line);font-size:12.5px}
+</style></head><body>
+<div class="cap"><div><div class="eyebrow">اعتماد، قلب محصول</div><h1>هیچ تغییر بی‌صدایی نیست. همه‌چیز دیده می‌شود و برمی‌گردد.</h1><p>یک ویرایش اشتباه و پنهان کافی است تا کاربر به کلیک برگردد. برای همین قاعدهٔ پیش‌نمایش از میزان خطر هر عمل می‌آید، نه از تصمیم هوش مصنوعی.</p></div><div class="brand">کار<b>نما</b></div></div>
+<div class="grid">
+ <div class="col3"><div class="hd"><span class="n">۱</span><h3>پیش‌نمایش پیش از اعمال</h3></div><p class="lead">عمل گروهی، کار دیگران و برنامه‌ریزی همیشه اول نشان داده می‌شوند. تیک هر مورد را می‌شود برداشت.</p>
+  <div class="comp"><div class="comp-h"><span>پیش‌نمایش تغییر · ۱۱ تسک</span><span>سارا و امید خبردار می‌شوند</span></div>
+   <div class="row"><span class="cb"></span><span class="grow">رفع باگ منوی کشویی</span><span style="font-size:11.5px;color:var(--ink-3)">← سارا · ۶ ساعت آزاد</span></div>
+   <div class="row"><span class="cb"></span><span class="grow">صفحهٔ خلاصهٔ اقساط</span><span style="font-size:11.5px;color:var(--ink-3)">← امید · ۸ ساعت آزاد</span></div>
+   <div class="row"><span class="cb off"></span><span class="grow" style="color:var(--ink-3)">مهاجرت پایگاه داده</span><span style="font-size:11.5px;color:var(--ink-3)">نگه داشته شد</span></div>
+   <div class="row"><span class="cb"></span><span class="grow">متن اعلان یادآوری</span><span style="font-size:11.5px;color:var(--ink-3)">← سارا</span></div>
+   <div style="display:flex;gap:8px;padding:9px 12px;background:var(--sunk);border-top:1px solid var(--line)"><span class="btn primary">اعمال ۱۰ تغییر</span><span class="btn">لغو</span></div>
+  </div>
+  <div class="fail">حذف، بایگانی، تغییر دسترسی و دعوت عضو همیشه تأیید صریح در رابط می‌خواهند؛ هوش مصنوعی نمی‌تواند خودش تأییدشان کند.</div>
+ </div>
+ <div class="col3"><div class="hd"><span class="n">۲</span><h3>رسید صادق</h3></div><p class="lead">رسید از نتیجهٔ واقعی ساخته می‌شود، نه از متن مدل. اگر بخشی انجام نشد، همین را می‌گوید و دلیلش را نشان می‌دهد.</p>
+  <div class="part">۴ از ۵ تغییر انجام شد<span class="btn" style="margin-inline-start:auto;background:transparent;border-color:currentColor;color:inherit;padding:1px 11px">برگرداندن</span></div>
+  <div class="comp"><div class="comp-h"><span>جزئیات</span><span>نوبت ۱۴:۰۲</span></div>
+   <div class="row"><span style="color:var(--good);font-weight:800">✓</span><span class="grow">۳ تسک به سارا · موعد ۲۹ مهر</span></div>
+   <div class="row"><span style="color:var(--good);font-weight:800">✓</span><span class="grow">برچسب «اقساط» روی ۱ تسک</span></div>
+   <div class="row"><span style="color:var(--crit);font-weight:800">✕</span><span class="grow">«قرارداد درگاه» تغییر نکرد: در پروژه‌ای است که تو دسترسی ویرایش نداری.</span></div>
+  </div>
+  <div class="receipt">برگرداندن همهٔ این نوبت با یک ضربه<span class="btn">برگرداندن</span></div>
+ </div>
+ <div class="col3"><div class="hd"><span class="n">۳</span><h3>اعتماد تدریجی و سابقهٔ شفاف</h3></div><p class="lead">برای هر نوع عمل، خودت انتخاب می‌کنی همکار فقط پیشنهاد بدهد، پیش‌نمایش نشان دهد، یا خودکار انجام دهد.</p>
+  <div class="comp set"><div class="comp-h"><span>خودمختاری همکار</span><span>تنظیم شخصی</span></div>
+   <div><span>ساختن تسک</span><span class="seg"><span>پیشنهاد</span><span>پیش‌نمایش</span><span class="on">خودکار</span></span></div>
+   <div><span>تغییر گروهی</span><span class="seg"><span>پیشنهاد</span><span class="on">پیش‌نمایش</span><span>خودکار</span></span></div>
+   <div><span>کار دیگران</span><span class="seg"><span>پیشنهاد</span><span class="on">پیش‌نمایش</span><span>خودکار</span></span></div>
+   <div><span>برنامه‌ریزی اسپرینت</span><span class="seg"><span class="on">پیشنهاد</span><span>پیش‌نمایش</span><span>خودکار</span></span></div>
+  </div>
+  <div class="log"><div><span class="av m">م</span><span class="grow">موعد به ۲۹ مهر تغییر کرد</span><span class="ai">هوش مصنوعی از طرف مریم</span></div><div><span class="av s">س</span><span class="grow">وضعیت: در جریان</span><span style="font-size:11px;color:var(--ink-3)">دستی</span></div><div><span class="av m">م</span><span class="grow">مسئول: علی ← سارا</span><span class="ai">هوش مصنوعی از طرف مریم</span></div></div>
+ </div>
+</div></body></html>

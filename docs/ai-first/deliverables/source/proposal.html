@@ -1,0 +1,248 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>کارنما — پروپوزال محصول</title>
+<link rel="stylesheet" href="base.css">
+<style>
+@page{size:A4;margin:17mm 16mm 19mm 16mm;@bottom-center{content:counter(page,persian);font-family:Vazirmatn;font-size:9pt;color:#83939A}@bottom-left{content:"کارنما · پروپوزال محصول · نسخهٔ ۱٫۰";font-family:Vazirmatn;font-size:8pt;color:#A7B4B9}}
+@page cover{margin:0;@bottom-center{content:none}@bottom-left{content:none}}
+body{font-size:10.4pt;line-height:1.95;color:var(--ink);background:#fff}
+.cover{page:cover;inline-size:210mm;block-size:297mm;background:var(--teal-deep);color:#fff;position:relative;overflow:hidden;display:grid;grid-template-rows:auto auto 1fr auto;padding:22mm 18mm 16mm;break-after:page}
+.cover::before{content:"";position:absolute;inset:0;background:radial-gradient(120mm 90mm at 90% 0%,rgba(227,154,43,.28),transparent 65%),radial-gradient(140mm 110mm at 0% 100%,rgba(62,120,131,.55),transparent 60%)}
+.cover > *{position:relative}
+.cv-top{display:flex;justify-content:space-between;align-items:center;font-size:10pt;color:#B9CDD1}
+.cv-brand{font-size:15pt;font-weight:800;color:#fff}.cv-brand b{color:var(--saffron-2)}
+.cv-title{margin-top:30mm}
+.cv-title .k{font-size:11pt;color:var(--saffron-2);font-weight:700;letter-spacing:.3px}
+.cv-title h1{font-size:46pt;line-height:1.15;margin:4mm 0 3mm;font-weight:800}
+.cv-title h1 b{color:var(--saffron-2)}
+.cv-title p{font-size:15pt;line-height:1.7;margin:0;color:#DDE9EB;max-inline-size:150mm;font-weight:500}
+.cv-img{align-self:center;margin-top:10mm}
+.cv-img img{inline-size:100%;border-radius:4mm;box-shadow:0 8mm 20mm rgba(0,0,0,.35)}
+.cv-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;border-top:1px solid rgba(255,255,255,.18);padding-top:5mm;font-size:9pt;color:#B9CDD1}
+.cv-foot b{display:block;color:#fff;font-size:10pt;font-weight:600}
+section{break-before:page}
+section.cont{break-before:auto;margin-top:9mm}
+.eb{font-size:9pt;font-weight:700;color:var(--saffron);letter-spacing:.3px;margin-bottom:1mm}
+h2{font-size:21pt;line-height:1.35;margin:0 0 4mm;font-weight:800;text-wrap:balance}
+h3{font-size:13pt;margin:6mm 0 2mm;font-weight:700;color:var(--teal)}
+p{margin:0 0 3mm}
+.lead{font-size:12pt;line-height:1.9;color:var(--ink-2)}
+ul{margin:0 0 3mm;padding-inline-start:5mm}li{margin-bottom:1.2mm}
+.fig{margin:3mm 0 4mm;break-inside:avoid}
+.fig img{inline-size:100%;border-radius:3mm;display:block;box-shadow:0 2mm 6mm rgba(21,34,42,.12)}
+.fig figcaption{font-size:8.8pt;color:var(--ink-3);margin-top:1.8mm}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin:4mm 0}
+.c{background:var(--sunk);border-radius:3mm;padding:4mm 4.5mm;break-inside:avoid}
+.c .n{font-size:9pt;font-weight:800;color:var(--saffron);margin-bottom:1mm}
+.c b{display:block;font-size:11.5pt;margin-bottom:1mm;line-height:1.5}
+.c span{font-size:9.6pt;color:var(--ink-2);line-height:1.8;display:block}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin:4mm 0}
+.st{border:1px solid var(--line);border-radius:3mm;padding:3.5mm 4.5mm;break-inside:avoid}
+.st .v{font-size:24pt;font-weight:800;color:var(--teal);line-height:1.2;font-variant-numeric:tabular-nums}
+.st .l{font-size:9.2pt;color:var(--ink-2)}
+.call{border-inline-start:3px solid var(--saffron);background:var(--saffron-soft);border-radius:0 2.5mm 2.5mm 0;padding:3.5mm 5mm;margin:4mm 0;font-size:10pt;break-inside:avoid}
+.call b{color:var(--saffron-ink)}
+.call.teal{border-color:var(--teal);background:var(--teal-soft)}.call.teal b{color:var(--teal)}
+table{inline-size:100%;border-collapse:collapse;margin:3mm 0 4mm;font-size:9.4pt;line-height:1.75;break-inside:auto}
+th{background:var(--teal);color:#fff;text-align:start;font-weight:600;padding:2mm 3mm}
+td{padding:2mm 3mm;border-bottom:1px solid var(--line);vertical-align:top}
+tr{break-inside:avoid}
+tbody tr:nth-child(even) td{background:var(--sunk)}
+td b{font-weight:700}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.two li{margin-bottom:.4mm;font-size:9.8pt;line-height:1.8}
+.pill{display:inline-block;font-size:8.2pt;font-weight:700;border-radius:999px;padding:0 2.2mm;background:var(--saffron-soft);color:var(--saffron-ink);margin-inline-start:1mm}
+.pill.t{background:var(--teal-soft);color:var(--teal)}.pill.r{background:var(--crit-soft);color:var(--crit)}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:2.5mm;margin:4mm 0;align-items:stretch}
+.flow div{background:var(--sunk);border:1px solid var(--line);border-radius:2.5mm;padding:3mm;font-size:9pt;line-height:1.7;position:relative}
+.flow div b{display:block;font-size:10pt;color:var(--teal)}
+.flow div.hot{background:var(--saffron-soft);border-color:#EBC98E}.flow div.hot b{color:var(--saffron-ink)}
+.phase{display:grid;grid-template-columns:22mm 1fr;gap:4mm;border-bottom:1px solid var(--line);padding:3mm 0;break-inside:avoid}
+.phase .ph{font-size:20pt;font-weight:800;color:var(--saffron);line-height:1.2}
+.phase .ph small{display:block;font-size:9pt;color:var(--ink-3);font-weight:600}
+.phase b{font-size:11.5pt}.phase p{margin:1mm 0;font-size:9.6pt;color:var(--ink-2)}
+.gate{font-size:9pt;color:var(--teal);font-weight:600}
+code{font-family:Vazirmatn;background:var(--sunk);border-radius:1mm;padding:0 1.2mm;font-size:9pt;direction:ltr;unicode-bidi:embed}
+.end{background:var(--teal-deep);color:#fff;border-radius:4mm;padding:8mm 9mm;margin-top:6mm}
+.end h2{color:#fff}.end p{color:#D3E2E5}.end b{color:var(--saffron-2)}
+</style></head><body>
+
+<div class="cover">
+ <div class="cv-top"><div class="cv-brand">کار<b>نما</b></div><div>پروپوزال محصول · نسخهٔ ۱٫۰ · مهر ۱۴۰۵</div></div>
+ <div class="cv-title"><div class="k">مدیریت تسک با همکار هوشمند، برای تیم‌های ایرانی</div><h1>بگو. <b>ببین.</b> برگردون.</h1><p>ابزار مدیریت تسکی در کلاس Jira و Linear، که در آن کاربر فقط می‌گوید چه می‌خواهد و هوش مصنوعی همان لحظه انجامش می‌دهد و نشانش می‌دهد.</p></div>
+ <div class="cv-img"><img src="img/1-hero.png" alt="صفحهٔ اصلی کارنما"></div>
+ <div class="cv-foot"><div><b>بازار</b>تیم‌های ۳ تا ۲۰۰ نفرهٔ کار دانشی در ایران</div><div><b>موتور هوش مصنوعی</b>Claude از راه API، پشت حصار هفت‌لایه</div><div><b>ستارهٔ قطبی</b>سهم کارهایی که با گفتن انجام می‌شوند</div></div>
+</div>
+
+<section style="break-before:auto">
+ <div class="eb">۰ · خلاصهٔ مدیریتی</div>
+ <h2>ابزاری که نگه‌داشتنش هزینه ندارد</h2>
+ <p class="lead">بزرگ‌ترین هزینهٔ هر ابزار مدیریت تسک، ورود و به‌روزرسانی داده است. تیم‌ها ابزار را رها می‌کنند چون نگه‌داشتنش وقت می‌برد. کارنما این هزینه را حذف می‌کند: کاربر می‌گوید «کارهای عقب‌افتادهٔ علی را بده به سارا» و کار انجام می‌شود، جلوی چشمش، با امکان برگرداندن.</p>
+ <p>کارنما دو ستون دارد. <b>هستهٔ مدیریت تسک</b> که بدون هوش مصنوعی هم در کلاس Linear است: سریع، راست‌به‌چپ بی‌نقص، شمسی بومی. و <b>همکار هوشمند</b> که هر کاری در سیستم ممکن است را از چت انجام می‌دهد: ساختن و تغییر و واگذاری کار، برنامه‌ریزی پروژه و اسپرینت، گزارش، نمودار و اتوماسیون.</p>
+ <div class="cards">
+  <div class="c"><div class="n">تمایز ۱</div><b>برابری کامل</b><span>هر کاری در رابط ممکن است، با گفتن هم ممکن است؛ چون هر دو از یک لایهٔ عمل واحد می‌گذرند.</span></div>
+  <div class="c"><div class="n">تمایز ۲</div><b>جواب بصری</b><span>همکار با کارت، فهرست، برد، نمودار و پیش‌نمایش تغییر جواب می‌دهد، نه متن طولانی.</span></div>
+  <div class="c"><div class="n">تمایز ۳</div><b>اعتماد</b><span>هیچ تغییر بی‌صدایی نیست. همه‌چیز دیده می‌شود و با یک ضربه برمی‌گردد.</span></div>
+ </div>
+ <h3>چرا حالا</h3>
+ <ul>
+  <li>هیچ ابزار ایرانی عاملی ندارد که از چت کار بسازد، تغییر دهد و برگرداند.</li>
+  <li>ابزارهای جهانی که هوش مصنوعی دارند (Jira، Notion، Asana) در دسترس کاربر ایرانی نیستند یا داده‌اش را حذف کرده‌اند.</li>
+  <li>حتی رقبای جهانی هوش مصنوعی را «افزونه» کرده‌اند، نه راه اصلی کار. تنها محصولی که «خودران بودن» را هدف گرفت، Height، در شهریور ۱۴۰۴ تعطیل شد.</li>
+ </ul>
+ <h3>ستارهٔ قطبی: سهم کارهایی که با گفتن انجام می‌شوند</h3>
+ <div class="stat"><div class="st"><div class="v">۴۰٪</div><div class="l">پایان پایلوت فاز ۱</div></div><div class="st"><div class="v">۶۰٪</div><div class="l">پایان فاز ۲</div></div><div class="st"><div class="v">۷۵٪</div><div class="l">پایان فاز ۳</div></div></div>
+ <div class="call"><b>پیش‌شرط اول.</b> موتور هوش مصنوعی Claude از راه API است. در دسترس بودن این سرویس برای محصولی که در ایران ارائه می‌شود باید پیش از هر تعهدی روشن شود؛ ایران در فهرست مناطق پشتیبانی‌شدهٔ Anthropic نیست. این پروپوزال راه دور زدن پیشنهاد نمی‌کند.</div>
+</section>
+
+<section>
+ <div class="eb">۱ · مسئله و بازار</div>
+ <h2>ابزار خوب هست، ولی نگه‌داشتنش کار دوم تیم است</h2>
+ <ul>
+  <li><b>هزینهٔ نگه‌داری.</b> ساختن تسک، به‌روز کردن وضعیت، جابه‌جا کردن موعد و ساختن گزارش، هر روز وقت تیم را می‌گیرد. نتیجه: دادهٔ ناقص و گزارش دستی.</li>
+  <li><b>دسترسی.</b> Trello، Notion و Asana کاربر ایرانی را بسته‌اند یا داده‌اش را حذف کرده‌اند؛ Atlassian فارسی را پشتیبانی نمی‌کند.</li>
+  <li><b>ابزارهای ایرانی</b> مدیریت کار پایه را حل کرده‌اند (کانبان و گانت شمسی، تایم‌شیت)، ولی هیچ‌کدام کار را از گفتن نمی‌سازند.</li>
+ </ul>
+ <h3>رقبا و هوش مصنوعی‌شان</h3>
+ <table><thead><tr><th style="inline-size:24%">رقیب</th><th style="inline-size:38%">هوش مصنوعی</th><th>چه چیزی ندارد</th></tr></thead><tbody>
+  <tr><td><b>Jira با Rovo</b></td><td>تقریباً هر کاری از چت، با پیش‌نمایش و تأیید</td><td>ادعای موفقیت بدون انجام کار؛ فارسی نه؛ برای ایران در دسترس نیست</td></tr>
+  <tr><td><b>Linear</b></td><td>عامل کناری، پیشنهاد درون‌خطی با دلیل، اعتماد تدریجی</td><td>جواب بصری محدود؛ فارسی نه</td></tr>
+  <tr><td><b>Notion</b></td><td>عاملی که صدها صفحه را تغییر می‌دهد</td><td>برگرداندن فقط صفحه‌به‌صفحه؛ ساخت تکراری</td></tr>
+  <tr><td><b>ClickUp، Asana، monday</b></td><td>Brain، AI Studio، agents</td><td>هزینهٔ اجباری روی هر صندلی؛ شکایت کاربران</td></tr>
+  <tr><td><b>Height</b></td><td>«خودران»</td><td>تعطیل شد، شهریور ۱۴۰۴</td></tr>
+  <tr><td><b>بهتایم</b></td><td>«پندار»: پرسش‌وپاسخ با جدول و نمودار</td><td>عمل نوشتنی ندارد</td></tr>
+  <tr><td><b>تسکیـ، دوایتیفای</b></td><td>دستیار فارسی ادعاشده</td><td>از محیط تحقیق قابل بررسی نبود؛ <b>پیش از نهایی شدن بررسی شود</b></td></tr>
+ </tbody></table>
+ <div class="call teal"><b>جای خالی بازار.</b> برابری کامل رابط و چت؛ برگرداندن یکجای کار هوش مصنوعی؛ جواب بصری فراتر از فهرست؛ پیش‌نمایش قبل و بعد برای تغییر گروهی؛ فارسی و شمسی؛ گزارش صادقانهٔ شکست؛ و محصولی که هدف اصلی‌اش ترجیح گفتن بر کلیک باشد.</div>
+</section>
+
+<section>
+ <div class="eb">۲ · محصول</div>
+ <h2>دو ستون: جایی که کار زندگی می‌کند، و راهی که انجام می‌شود</h2>
+ <div class="two">
+  <div><h3 style="margin-top:0">ستون ۱ · هستهٔ مدیریت تسک</h3>
+   <ul><li>سازمان، تیم، پروژه؛ تسک با همهٔ فیلدها، زیرتسک و چک‌لیست</li><li>وضعیت سفارشی، وابستگی، تکرار با تقویم شمسی</li><li>اسپرینت، بک‌لاگ، مایلستون</li><li>نماهای فهرست، برد، جدول، تقویم، خط زمان؛ «کار من»؛ بار کاری</li><li>کامنت و منشن روی تسک؛ صفحهٔ متنی سبک شبیه Notion</li><li>داشبورد، گزارش‌های آماده، اتوماسیون</li><li>ورود از Jira، Trello، Notion و اکسل؛ API؛ اتصال Git</li></ul>
+   <p style="font-size:9.6pt;color:var(--ink-2)"><b>معیار کیفیت:</b> هر تعامل کمتر از ۱۰۰ میلی‌ثانیه؛ راست‌به‌چپ بی‌نقص؛ شمسی بومی؛ کیبوردمحور.</p></div>
+  <div><h3 style="margin-top:0">ستون ۲ · همکار هوشمند</h3>
+   <ul><li><b>پنل همکار</b> کنار هر صفحه، که می‌داند کاربر چه می‌بیند و چه انتخاب کرده</li><li><b>نوار فرمان</b> با Ctrl+K از هر جا</li><li><b>هوش مصنوعی درجا</b> در شرح تسک و صفحه</li><li><b>صفحهٔ امروز</b> با خلاصهٔ صبح به‌صورت کارت‌های تعاملی</li><li><b>صدا</b>، راه اصلی روی موبایل</li></ul>
+   <p style="font-size:9.6pt;color:var(--ink-2)"><b>قاعدهٔ همزمانی:</b> هر کاری که همکار انجام می‌دهد همان لحظه در نمای واقعی تیم دیده می‌شود، نه فقط در چت.</p></div>
+ </div>
+ <figure class="fig" style="inline-size:84%;margin-inline:auto"><img src="img/2-plan.png" alt=""><figcaption>برنامه‌ریزی با یک جمله: از شرح قابلیت تا پروژهٔ ۱۸ تسکی با برآورد و تقسیم کار بر اساس ظرفیت، که اول به‌صورت پیش‌نمایش نشان داده می‌شود.</figcaption></figure>
+ <p><b>کاربر هدف:</b> تیم‌های ۳ تا ۲۰۰ نفره با کار دانشی: نرم‌افزار، محصول، بازاریابی، آژانس، عملیات و واحدهای اداری. <b>بیرون از دامنه:</b> پیام‌رسان بین افراد، مدیریت سند با تأیید رسمی، تیکت و SLA، CRM، و موبایل آفلاین.</p>
+</section>
+
+<section>
+ <div class="eb">۳ · تجربهٔ کار با همکار</div>
+ <h2>چرا کاربر دیگر نمی‌خواهد کلیک کند</h2>
+ <p>کاربر فقط وقتی رابط دستی را رها می‌کند که گفتن در همهٔ این پنج محور از کلیک بهتر باشد.</p>
+ <table><thead><tr><th style="inline-size:18%">محور</th><th style="inline-size:36%">با کلیک</th><th>با گفتن</th></tr></thead><tbody>
+  <tr><td><b>سرعت</b></td><td>ساختن ۸ تسک با مسئول و موعد: چند دقیقه</td><td>یک جمله؛ کمتر از ۵ ثانیه</td></tr>
+  <tr><td><b>کار گروهی</b></td><td>فیلتر، انتخاب، ویرایش گروهی</td><td>«همهٔ کارهای عقب‌افتادهٔ علی رو بده به سارا»</td></tr>
+  <tr><td><b>پرسیدن</b></td><td>ساختن فیلتر و نمودار</td><td>«این هفته چی تحویل می‌دیم؟» و جواب بصری</td></tr>
+  <tr><td><b>فکر کردن</b></td><td>برنامه‌ریزی دستی از روی شرح</td><td>«از این شرح تسک بساز و بر اساس ظرفیت پخش کن»</td></tr>
+  <tr><td><b>اطمینان</b></td><td>کاربر دقیقاً می‌داند چه کرده</td><td>هر تغییر دیده می‌شود، پیش‌نمایش دارد و برمی‌گردد</td></tr>
+ </tbody></table>
+ <figure class="fig"><img src="img/3-report.png" alt=""><figcaption>جواب بصری: گزارش هفتگی با ارجاع به تسک منبع برای هر جمله، نمودار واقعی، و یک ضربه برای ذخیره یا افزودن به داشبورد.</figcaption></figure>
+ <p><b>کمترین سؤال.</b> همکار اگر بتواند با اطمینان حدس بزند، حدس می‌زند و حدسش را قابل‌ویرایش نشان می‌دهد. اگر ابهام واقعی باشد، فقط یک سؤال با دکمهٔ انتخاب می‌پرسد. <b>حافظه.</b> واژه‌نامهٔ تیم («بک» یعنی تیم بک‌اند) و ترجیح شخصی، که کاربر می‌بیند و ویرایش می‌کند. <b>پیش‌دستی آرام.</b> خلاصهٔ صبح، پیشنهاد پایان روز، پیش‌نویس گزارش هفتگی و نشانهٔ ریسک، بدون پنجرهٔ مزاحم.</p>
+</section>
+
+<section>
+ <div class="eb">۴ · فارسی واقعی و صدا</div>
+ <h2>همکاری که فارسی حرف زدن تیم را می‌فهمد</h2>
+ <figure class="fig"><img src="img/4-voice.png" alt=""><figcaption>فرمان صوتی روی موبایل: گفتار روی سرورهای خودمان داخل ایران به متن تبدیل می‌شود و متن و کارهای پیشنهادی پیش از ساخته شدن دیده می‌شوند.</figcaption></figure>
+ <div class="two">
+  <div><h3 style="margin-top:0">زبان و زمان</h3><ul><li>محاوره و رسمی، فینگلیش، ترکیب فارسی و انگلیسی</li><li>«آخر برج»، «بعد از تعطیلات نوروز»، «دو هفتهٔ دیگه» با <b>حل‌کنندهٔ قطعی تقویم شمسی</b> و تعطیلات رسمی</li><li>«این» و «اینا» یعنی آنچه روی صفحه انتخاب شده</li></ul></div>
+  <div><h3 style="margin-top:0">دقت در جایی که مهم است</h3><ul><li>آرگومان‌ها شناسه‌محورند؛ نام با ابزار جدا به شخص درست تبدیل می‌شود</li><li>رسید، مقدارها را نشان می‌دهد تا خطای نام یا تاریخ فوراً دیده شود</li><li>گفتار محاورهٔ فارسی هنوز خطای بالایی دارد؛ پس متن همیشه پیش از اجرا دیده می‌شود</li></ul></div>
+ </div>
+</section>
+
+<section>
+ <div class="eb">۵ · اعتماد</div>
+ <h2>هیچ تغییر بی‌صدایی نیست</h2>
+ <figure class="fig"><img src="img/5-trust.png" alt=""><figcaption>سه لایهٔ اعتماد: پیش‌نمایش پیش از اعمال، رسید صادق که شکست را هم می‌گوید، و خودمختاری قابل‌تنظیم با سابقهٔ شفاف.</figcaption></figure>
+ <table><thead><tr><th style="inline-size:34%">نوع عمل</th><th>رفتار</th></tr></thead><tbody>
+  <tr><td><b>عمل ساده</b> روی کار خود کاربر</td><td>فوراً اجرا، رسید با «برگرداندن»</td></tr>
+  <tr><td><b>عمل گروهی</b> یا <b>کار دیگران</b></td><td>پیش‌نمایش، سپس «اعمال»؛ در رسید نوشته می‌شود چه کسی خبردار می‌شود</td></tr>
+  <tr><td><b>حذف، بایگانی، دسترسی، دعوت</b></td><td>همیشه تأیید صریح در رابط؛ هوش مصنوعی نمی‌تواند خودش تأیید کند</td></tr>
+  <tr><td><b>برنامه‌ریزی چندمرحله‌ای</b></td><td>طرح کامل به‌صورت پیش‌نمایش؛ اجرای یکجا؛ برگرداندن یکجا</td></tr>
+ </tbody></table>
+ <p><b>سیاست پیش‌نمایش از برچسب خطر هر فرمان می‌آید، نه از تصمیم مدل.</b> رسید از نتیجهٔ واقعی ساخته می‌شود، نه از متن مدل؛ «ادعای موفقیت بدون انجام کار» بزرگ‌ترین شکایت کاربران از رقبای جهانی است.</p>
+</section>
+
+<section>
+ <div class="eb">۶ · حصار دامنه</div>
+ <h2>فقط کار خودش را می‌کند. نه بیشتر.</h2>
+ <figure class="fig"><img src="img/6-guard.png" alt=""><figcaption>درخواست بیرون از دامنه مؤدبانه رد می‌شود؛ متنی که داخل یک تسک خودش را دستور جا می‌زند، اثری ندارد.</figcaption></figure>
+ <div class="two">
+  <div><h3 style="margin-top:0">درون دامنه</h3><ul><li>هر پرسش یا عمل دربارهٔ داده‌های فضای کاری</li><li>راهنمای استفاده از محصول</li><li>مشورت دربارهٔ روش مدیریت کار در بستر همان فضای کاری</li><li>نوشتن متنی که به تسک، صفحه، گزارش یا کامنت تعلق دارد</li></ul></div>
+  <div><h3 style="margin-top:0">بیرون از دامنه</h3><ul><li>دانش عمومی، کدنویسی، تکلیف درسی</li><li>ترجمه یا نوشتن بی‌ربط به فضای کاری</li><li>گفتگوی آزاد</li><li>هر تلاش برای استخراج دستورالعمل‌ها</li></ul></div>
+ </div>
+ <p>از هفت لایهٔ حصار، سه لایه <span class="pill">مستقل از مدل</span> هستند: ابزارهای محدود به محصول، اجرای مجوز در سرور، و تأیید عمل حساس در رابط. حتی اگر مدل فریب بخورد، آسیب محدود می‌ماند.</p>
+</section>
+
+<section>
+ <div class="eb">۷ · معماری</div>
+ <h2>یک لایهٔ عمل، برای رابط و هوش مصنوعی</h2>
+ <div class="flow">
+  <div><b>کاربر</b>متن یا صدا؛ کارت پژواک محلی فوراً نشان می‌دهد چه فهمیده شد</div>
+  <div><b>دروازهٔ دامنه</b>درخواست بیرون از دامنه همین‌جا رد می‌شود</div>
+  <div class="hot"><b>Claude از راه API</b>تلاش متفاوت بر اساس مسیر؛ پاسخ جریانی؛ کش پیشوند</div>
+  <div class="hot"><b>لایهٔ عمل واحد</b>مجوز، اعتبارسنجی، رویداد، معکوس برای برگرداندن</div>
+  <div><b>اجزای تعاملی</b>در پنل، و به‌روزرسانی زندهٔ نمای تیم</div>
+ </div>
+ <p><b>لایهٔ عمل واحد</b> مهم‌ترین تصمیم فنی است. هر عمل محصول یک فرمان تایپ‌دار است که رابط، هوش مصنوعی، API عمومی و اتوماسیون همه صدا می‌زنند. نتیجه: هر دکمه‌ای که در رابط هست، هوش مصنوعی هم دارد؛ هر فرمان معکوس خودش را نگه می‌دارد؛ و ستارهٔ قطبی دقیق اندازه‌گیری می‌شود.</p>
+ <h3>وقتی API در دسترس نیست</h3>
+ <p>از خرداد ۱۴۰۴ تا خرداد ۱۴۰۵ حدود ۱۲۰ روز ارتباط بین‌الملل قطع بود. پس حالت بدون API یک حالت کاری واقعی است، نه استثنا.</p>
+ <table><thead><tr><th style="inline-size:20%">سطح</th><th style="inline-size:22%">وضعیت</th><th>رفتار محصول</th></tr></thead><tbody>
+  <tr><td><b>کامل</b></td><td>API سالم</td><td>همهٔ قابلیت‌ها</td></tr>
+  <tr><td><b>کند</b></td><td>API کند یا پرخطا</td><td>کارت پژواک؛ پیشنهاد انجام دستی با فرم نیمه‌پر؛ کارهای سنگین در صف</td></tr>
+  <tr><td><b>محدود</b></td><td>API قطع</td><td>مدل محلی روی سرور خودمان فقط برای فرمان ساده، همیشه با کارت تأیید</td></tr>
+  <tr><td><b>بدون هوش مصنوعی</b></td><td>مدل محلی هم نیست</td><td>رابط دستی کامل؛ نوار فرمان به جست‌وجو برمی‌گردد</td></tr>
+ </tbody></table>
+ <h3>بودجهٔ تأخیر و محک‌ها</h3>
+ <div class="stat"><div class="st"><div class="v" style="font-size:18pt">&lt; ۷۰۰ms</div><div class="l">اولین بازخورد دیداری (محلی)</div></div><div class="st"><div class="v" style="font-size:18pt">&lt; ۳ ثانیه</div><div class="l">عمل ساده دیده‌شده در نما</div></div><div class="st"><div class="v" style="font-size:18pt">&lt; ۱۵ ثانیه</div><div class="l">پیش‌نمایش برنامهٔ چندمرحله‌ای</div></div></div>
+ <p>پیش از ساخت، سه محک ساخته می‌شود: ۱۰۰۰ فرمان فارسی با داوری بر پایهٔ حالت نهایی فضای کاری، ۳۰۰ درخواست بیرون از دامنه و تزریقی، و ۵۰۰ عبارت زمانی فارسی.</p>
+</section>
+
+<section>
+ <div class="eb">۸ · ترتیب ساخت و سنجش</div>
+ <h2>هسته و همکار با هم رشد می‌کنند</h2>
+ <div class="phase"><div class="ph">۰<small>پایه</small></div><div><b>پایه و محک‌ها</b><p>لایهٔ عمل با معکوس هر فرمان؛ دسترسی؛ شمسی و راست‌به‌چپ؛ اتصال API؛ دروازهٔ دامنه؛ مدل محلی؛ سه محک.</p><div class="gate">دروازه: محک‌ها ساخته شده؛ پیش‌شرط API روشن</div></div></div>
+ <div class="phase"><div class="ph">۱<small>عرضهٔ اول</small></div><div><b>هسته و همکار</b><p>تسک، پروژه، وضعیت، نماهای فهرست و برد و جدول و تقویم، کامنت، «کار من»، ورود داده؛ ساختن و تغییر و پرسیدن و نما با گفتن؛ برگرداندن.</p><div class="gate">دروازه: ستارهٔ قطبی ۴۰٪ · موفقیت فرمان ۹۰٪ · صفر عمل اشتباه بی‌صدا</div></div></div>
+ <div class="phase"><div class="ph">۲<small>برنامه‌ریزی</small></div><div><b>برنامه‌ریزی و صدا</b><p>اسپرینت، خط زمان، وابستگی، صفحه، داشبورد، اتوماسیون، اپ موبایل؛ برنامه‌ریزی پروژه و اسپرینت، گزارش، جلسه به تسک، صدا، پیش‌دستی.</p><div class="gate">دروازه: ستارهٔ قطبی ۶۰٪</div></div></div>
+ <div class="phase"><div class="ph">۳<small>بلوغ</small></div><div><b>بلوغ</b><p>مهمان، API عمومی، Git؛ حافظه و یادگیری الگوی تیم.</p><div class="gate">دروازه: ستارهٔ قطبی ۷۵٪</div></div></div>
+ <h3>کیفیت همکار</h3>
+ <table><thead><tr><th style="inline-size:40%">شاخص</th><th>آستانه</th></tr></thead><tbody>
+  <tr><td>موفقیت فرمان (بدون برگرداندن یا اصلاح دستی)</td><td>≥ ۹۰٪ در فاز ۱ · ≥ ۹۵٪ در فاز ۲</td></tr>
+  <tr><td>نرخ برگرداندن</td><td>≤ ۵٪</td></tr>
+  <tr><td>سؤال روشن‌کننده به‌ازای هر نوبت</td><td>≤ ۰٫۲</td></tr>
+  <tr><td>محک تاریخ شمسی</td><td>≥ ۹۹٪</td></tr>
+  <tr><td>محک حصار</td><td>≥ ۹۸٪ رد؛ <b>صفر</b> عمل اجراشده از تزریق</td></tr>
+  <tr><td>عمل اشتباه بی‌صدا</td><td><b>صفر</b>؛ هر مورد یک رخداد است</td></tr>
+ </tbody></table>
+ <p><b>پایلوت:</b> سه تیم ۵ تا ۲۰ نفره (نرم‌افزار، بازاریابی یا آژانس، عملیات یا اداری)؛ دو هفته ثبت مبنا؛ هشت هفته روی فاز ۱.</p>
+</section>
+
+<section>
+ <div class="eb">۹ · ریسک‌ها و گام بعد</div>
+ <h2>آنچه باید پیش از ساخت روشن شود</h2>
+ <table><thead><tr><th style="inline-size:36%">ریسک</th><th style="inline-size:9%">شدت</th><th>کاهش</th></tr></thead><tbody>
+  <tr><td><b>در دسترس بودن API</b> برای محصولی در ایران</td><td><span class="pill r">بالا</span></td><td>پیش‌شرط اول، پیش از فاز ۰؛ معماری مستقل از مدل</td></tr>
+  <tr><td><b>قطع اینترنت بین‌الملل</b> (حدود ۱۲۰ روز در یک سال)</td><td><span class="pill r">بالا</span></td><td>چهار سطح تنزل؛ مدل محلی از روز اول برای فرمان ساده</td></tr>
+  <tr><td><b>یک ویرایش اشتباه و بی‌صدا</b></td><td><span class="pill r">بالا</span></td><td>پیش‌نمایش از برچسب خطر؛ برگرداندن همه‌چیز؛ رسید صادق</td></tr>
+  <tr><td><b>خطای آرگومان فارسی</b> (نام، تاریخ، عدد)</td><td><span class="pill r">بالا</span></td><td>آرگومان شناسه‌محور؛ حل‌کنندهٔ قطعی تاریخ؛ رسید با مقدارها</td></tr>
+  <tr><td><b>کاربر کلیک را ترجیح دهد</b></td><td><span class="pill r">بالا</span></td><td>پایلوت فاز ۱ دقیقاً برای آزمودن همین است</td></tr>
+  <tr><td><b>تزریق دستور</b> از محتوای تسک</td><td><span class="pill r">بالا</span></td><td>هفت لایهٔ حصار؛ محک تزریق</td></tr>
+  <tr><td><b>کیفیت گفتار محاورهٔ فارسی</b></td><td><span class="pill r">بالا</span></td><td>متن پیش از اجرا؛ تنظیم روی دادهٔ خودمان</td></tr>
+  <tr><td><b>تسکیـ و دوایتیفای</b> همین جایگاه را ادعا می‌کنند</td><td><span class="pill">متوسط</span></td><td>بررسی با حساب آزمایشی از داخل ایران</td></tr>
+  <tr><td><b>ارسال داده به API بیرونی</b> برای سازمان حساس</td><td><span class="pill">متوسط</span></td><td>کمینه‌سازی داده؛ خاموش کردن هوش مصنوعی در سطح سازمان</td></tr>
+ </tbody></table>
+ <div class="end">
+  <h2>گام بعد پس از تصویب</h2>
+  <p><b>۱.</b> روشن کردن مسیر در دسترس بودن API. بدون آن، مزیت اصلی محصول وجود ندارد.<br>
+  <b>۲.</b> بررسی تسکیـ، دوایتیفای و پندار بهتایم با حساب آزمایشی از داخل ایران.<br>
+  <b>۳.</b> ساختن سه محک و اندازه‌گیری تأخیر واقعی از ایران تا API.<br>
+  <b>۴.</b> جذب سه تیم پایلوت.<br>
+  <b>۵.</b> شروع فاز ۰.</p>
+  <p style="margin:0;font-size:9pt;color:#9DB5BA">این پروپوزال تصمیم خریدار، قیمت و مدل درآمد را به مرحلهٔ بعد می‌سپارد. «کارنما» نام کاری است. همهٔ نیازها از پژوهش روی منابع عمومی آمده‌اند و هنوز با کاربر واقعی آزموده نشده‌اند.</p>
+ </div>
+</section>
+</body></html>
