@@ -12,7 +12,7 @@
 | `mockup/index.html` | نمونهٔ بصری تعاملی رابط |
 | `decisions.md` | دفتر تصمیم‌های این شاخه (A-) |
 | `product-definition.md` | تعریف محصول، پرسوناها، اصول |
-| `core-task-management.md` | ستون ۱: قابلیت‌های هسته (T-) |
+| `core-task-management.md` | کاتالوگ نهایی: ۲۱۰ قابلیت (T-) با فاز و اولویت |
 | `ai-experience.md` | ستون ۲: تجربهٔ کار با هوش مصنوعی و قابلیت‌ها (AI-) |
 | `ai-architecture.md` | معماری لایهٔ هوش مصنوعی و حصار دامنه |
 | `scenarios.md` | هشت سناریوی گفتگومحور با آزمون پذیرش |
@@ -20,6 +20,8 @@
 | `success-metrics.md` | ستارهٔ قطبی، کیفیت، سرعت، پایلوت |
 | `risks.md` | ریسک‌ها |
 | `research/competitors-ai.md` | هوش مصنوعی در ابزارهای مدیریت تسک |
-| `requirements/` | نیازمندی‌ها: ماتریس برابری قابلیت، کاتالوگ نهایی، PRD |
+| `requirements/parity-matrix.md` | ماتریس برابری: ۴۴۶ قابلیت در برابر Jira، JSM، Linear، تسکولو و دیگران |
+| `requirements/prd/` | PRD نسخهٔ اول: ۱۵ اپیک، ۱۰۰ داستان، ۶۶۲ معیار پذیرش |
+| `requirements/v1-definition.md` | تعریف نسخهٔ اول، شرط پایلوت و عرضهٔ عمومی |
 | `research/parity/` | فهرست کامل قابلیت‌های Jira، Linear، تسکولو و دیگران |
 | `research/ai-feasibility.md` | صدای فارسی، تاریخ شمسی، دسترس‌پذیری API، جایگزین محلی |
